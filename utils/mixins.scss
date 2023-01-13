@@ -29,16 +29,19 @@
 /*********************************************************************************************************/
 /*********************************************************************************************************/
 /******************PSEUDO-CLASS**************************************************************************/
+$colour-bg:#333;
+$colour-white:#DDD;
+$colour-invalid:orange;
 $txt-input-palette: (
     active: (
-        bg: $colour-primary,
-        border: $colour-primary,
+        bg: $colour-bg,
+        border: $colour-bg,
         txt: $colour-white,
 
     ),
     focus: (
-        bg: $colour-primary,
-        border: $colour-primary,
+        bg: $colour-bg,
+        border: $colour-bg,
         txt: $colour-white,
     ),
     invalid: (
@@ -143,7 +146,12 @@ $txt-input-palette: (
     }
 }
 
-@mixin until-desktop($max: map-get($breakpoints, desktop) + "px") {
+@mixin to-desktop($max: map-get($breakpoints, desktop) + "px") {
+    @media screen and (max-width: $max) {
+        @content;
+    }
+}
+@mixin to-tablette($max: map-get($breakpoints, desktop) + "px") {
     @media screen and (max-width: $max) {
         @content;
     }
