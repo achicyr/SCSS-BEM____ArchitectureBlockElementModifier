@@ -29,32 +29,28 @@
 /*********************************************************************************************************/
 /*********************************************************************************************************/
 /******************PSEUDO-CLASS**************************************************************************/
-$colour-bg:#333;
-$colour-white:#DDD;
-$colour-invalid:orange;
 $txt-input-palette: (
     active: (
-        bg: $colour-bg,
-        border: $colour-bg,
-        txt: $colour-white,
+        bg: $primary,
+        border: $primary,
+        txt: $secondary,
 
     ),
     focus: (
-        bg: $colour-bg,
-        border: $colour-bg,
-        txt: $colour-white,
+        bg: $primary,
+        border: $primary,
+        txt: $secondary,
     ),
     invalid: (
-        bg: $colour-invalid,
-        border: $colour-white,
-        txt: $colour-white,
+        bg: $ternary,
+        border: $secondary,
+        txt: $secondary,
     )
 );
 
-@mixin txt-input-palette($palettes) {
+@mixin txt-input-palette($palette_states) {
 
-    @each $state,
-    $palette in $palettes {
+    @each $state,$palette in $palette_states {
         &:#{$state} {
             border: .1rem solid map-get($palette, border);
             background-color: map-get($palette, bg);
