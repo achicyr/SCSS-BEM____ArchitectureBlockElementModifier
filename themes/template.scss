@@ -1,6 +1,7 @@
 /**/
 
 
+// DIMENSIONS
 $XS: 5px;
 $S: 10px;
 $S_: 15px;
@@ -19,23 +20,29 @@ $_XL: 3em;
 $_XXL: 5em;
 
 
+// TYPOGRAPHIES
 // $titres: 'typography des titre';
 // $contenus: 'typography des contenus';
 
 
+// FONDS
 $primary:#9356DC;
 $secondary:#FF79DA;
 $ternary:#99E2D0;
 
 
+// COULEUR TEXTES
 $primary_text:#000;
 $secondary_text:#FFF;
 $ternary_text:#aaa;
 
 
+// BREAKPOINTS
+// $watch: "taille XS";
 $mobile: 570;
 $tablette: 960;
 $desktop: 1460;
 // $tv: "taille XL";
 $breakpoints:(mobile:$mobile,tablette:$tablette,desktop:$desktop);
 
+// ENSEMBLES DE CHARTE GRAPHIQUE

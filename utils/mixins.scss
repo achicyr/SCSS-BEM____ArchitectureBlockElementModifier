@@ -106,11 +106,11 @@ $txt-input-palette: (
     }
 }
 
-@mixin tv-only($min: map-get($breakpoints, desktop) + 1 + "px") {
-    @media screen and (min-width: $min) {
-        @content;
-    }
-}
+// @mixin tv-only($min: map-get($breakpoints, desktop) + 1 + "px") {
+//     @media screen and (min-width: $min) {
+//         @content;
+//     }
+// }
 
 @mixin mobile-and-tablette($max: map-get($breakpoints, tablette) + "px") {
     @media screen and (max-width: $max) {
@@ -124,11 +124,11 @@ $txt-input-palette: (
     }
 }
 
-@mixin desktop-and-tv($min: map-get($breakpoints, tablette) + 1 + "px") {
-    @media screen and (min-width: $min) {
-        @content;
-    }
-}
+// @mixin desktop-and-tv($min: map-get($breakpoints, tablette) + 1 + "px") {
+//     @media screen and (min-width: $min) {
+//         @content;
+//     }
+// }
 
 @mixin from-desktop($min: map-get($breakpoints, tablette) + 1 + "px") {
     @media screen and (min-width: $min) {
@@ -147,7 +147,7 @@ $txt-input-palette: (
         @content;
     }
 }
-@mixin to-tablette($max: map-get($breakpoints, desktop) + "px") {
+@mixin to-tablette($max: map-get($breakpoints, tablette) + "px") {
     @media screen and (max-width: $max) {
         @content;
     }
